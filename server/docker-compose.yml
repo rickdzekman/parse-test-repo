@@ -1,0 +1,25 @@
+version: "3.4"
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: development
+    depends_on:
+      - db
+    ports:
+      - "${WEB_PORT:-3001}:3001"
+      - "8000:8000"
+    volumes:
+      - ./:/usr/src/app/
+    environment:
+      NODE_ENV: development
+      MONGO_URL: mongodb://db:27017/testdb
+    stdin_open: true
+    tty: true
+  db:
+    image: mongo:latest
+    volumes:
+      - dbdata:/data/db
+volumes:
+  dbdata:

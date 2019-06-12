@@ -1,0 +1,12 @@
+{
+  "name": "parse-test-repo-wrapper",
+  "version": "0.0.0",
+  "description": "A wrapper for a fullstack Parse/React app",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd server && docker-compose up\" \"cd client && npm start\""
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
