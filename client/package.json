@@ -2,7 +2,7 @@
   "name": "parse-test-repo-client",
   "version": "0.0.0",
   "dependencies": {
-    "parse": "^2.4.0",
+    "parse": "^2.10.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
